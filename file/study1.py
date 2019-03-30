@@ -70,3 +70,81 @@ li_last_3 = li[-1:  -4: -1]
 print(li_last_3)
 # 反转数组
 print(li[::-1])
+print(li[-2:: -1])
+
+s = 'abcdefg'
+try:
+    s[0] = 'x'
+except Exception as e:
+    print(e)
+
+li = list(s)
+print(li)
+
+s = ',,'.join(li)
+print(s)
+s = '-'.join(li)
+print(s)
+
+s = 'abc,def,ghi'
+p1, p2 ,p3 = s.split(',')
+print(p1, p2, p3)
+
+s = 'abcdfsa'
+print(s[0], s[-1])
+print(s[2:5])
+
+print(type([1, 2, 3]))
+print(dir(list))
+
+class Clazz(object):
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        print(x + y)
+
+    def display(self):
+        print(self.x , self.y)
+
+clz = Clazz(100, 200)
+clz.display()
+
+
+
+print(type(Clazz))
+
+
+class Base:
+    def run(self):
+        print('Base::run')
+
+class Tom(Base):
+    def run(self):
+        print('Tom::run')
+
+
+t = Tom()
+t.run()
+
+def run(runner):
+    runner.run()
+
+class R1:
+    def run(self):
+        print('R1::run')
+
+class R2:
+    def run(self):
+        print('R2::run')
+
+run(R1())
+run(R2())
+
+f = open('text.txt', 'r')
+for line in f.readlines():
+    print(line)
+
+with open('text.txt') as f:
+    for line in f.readlines():
+        print(line)
